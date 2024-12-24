@@ -1,0 +1,269 @@
+body {
+  font-family: Courier, sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+.navbar {
+  max-width: 1200px; /* Largura mÃ¡xima alinhada com o conteÃºdo */
+  margin: 0 auto; /* Centraliza o cabeÃ§alho */
+  background-color: #343a40;
+}
+
+.navbar-brand {
+  font-family: "Dune Rise ", Courier, monospace;
+  font-size: 20px;
+}
+
+.icon-img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.icon-img:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+
+#screens {
+  max-width: 1200px; /* Largura mÃ¡xima alinhada com o cabeÃ§alho */
+  margin: 0 auto; /* Centraliza o conteÃºdo */
+  padding: 0 15px; /* EspaÃ§amento interno para evitar encostar nas bordas */
+  position: relative;
+  overflow: hidden;
+}
+
+.screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 0;
+}
+
+.screen.active {
+  position: relative;
+  z-index: 1;
+  opacity: 1;
+}
+
+.screen.hidden {
+  z-index: 0;
+  opacity: 0;
+}
+
+/* PÃ¡gina Inicial */
+#home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 100%;
+  padding: 2rem 1rem;
+  
+}
+
+#home .content {
+  padding-top: 60px; /* EspaÃ§o entre cabeÃ§alho e galeria */
+  flex: 1 1 50%;
+  max-width: 600px;
+  margin: 0 2rem;
+  text-align: justify;
+}
+
+#home .image {
+  flex: 1 1 50%;
+  max-width: 600px;
+  margin: 0 2rem;
+  text-align: center;
+  padding-top: 80px;
+}
+
+#home .image img {
+  
+  width: 85%;
+  height: auto;
+  border-radius: 8px;
+}
+
+#home h1 {
+  font-weight: bold;
+  font-family: "Courier", Courier, monospace;
+  font-size: 35px;
+}
+
+/* Galeria */
+#gallery {
+  padding-top: 2rem; /* EspaÃ§o entre cabeÃ§alho e galeria */
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+  grid-template-rows: repeat(3, 200px); /* 3 linhas */
+  gap: 1rem; /* EspaÃ§amento entre imagens */
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .navbar {
+    max-width: 100%; /* Remove limite de largura em telas menores */
+    margin: 0; /* Alinha com as bordas em telas menores */
+    padding: 10px 20px;
+  }
+
+  #screens {
+    padding: 0 10px; /* Ajusta o padding para telas menores */
+  }
+
+  .navbar-brand {
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  .navbar .social-icons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+  }
+
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .navbar-nav .nav-item {
+    width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: 1fr; /* 1 coluna em telas pequenas */
+  }
+
+  .gallery-item {
+    height: 150px;
+  }
+}
+
+#gallery h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #333;
+  font-weight: bold;
+  font-family: "Courier", Courier, monospace;
+}
+
+#booking h2 {
+  padding-top: 2rem;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #333;
+  font-weight: bold;
+  font-family: "Courier", Courier, monospace;
+}
+
+audio {
+  border-radius: 0;
+  border: none; /* Remove bordas do player */
+  width: 100%;
+  max-width: 600px;
+}
+#home {
+  display: flex;
+  flex-wrap: nowrap; /* Elementos lado a lado em desktop */
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px; /* Alinhado ao cabeçalho */
+  margin: 0 auto; /* Centraliza a seção */
+  padding: 20px; /* Espaçamento interno */
+  gap: 20px; /* Espaço entre texto e imagem */
+}
+
+#home .content {
+  flex:  50%; /* Texto ocupa metade do espaço */
+  max-width: 600px;
+  text-align: justify; /* Alinhamento do texto */
+}
+
+#home .radio-player {
+  margin-top: 20px; /* Espaço acima do áudio */
+}
+
+#home .image {
+  flex:  50%; /* Imagem ocupa metade do espaço */
+  max-width: 350px;
+}
+
+#home .image img {	
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Responsividade para mobile */
+@media (max-width: 768px) {
+  #home {
+    flex-direction: column; /* Empilha os itens */
+    gap: 20px; /* Espaçamento entre os elementos */
+  }
+
+  #home .content, #home .image {
+    flex:   100%; /* Ocupa toda a largura */
+  }
+}
+@media (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: row; /* Exibe os itens do menu em linha */
+    justify-content: center; /* Centraliza os itens */
+    gap: 10px; /* Espaçamento entre os itens */
+  }
+
+  .navbar-brand {
+    display: block;
+    margin-bottom: 10px; /* Espaço entre o título e o menu */
+    text-align: center; /* Centraliza o título */
+  }
+}
+@media (max-width: 768px) {
+  #home {
+    flex-direction: column-reverse; /* Empilha o conteúdo e a imagem, com a imagem acima */
+  }
+
+  #home .content {
+    order: 2; /* Garante que o conteúdo fique abaixo da imagem */
+    text-align: left; /* Alinha o texto de forma justificada */
+    text-justify: interno; /* Controla o espaçamento entre palavras */
+  }
+
+  #home .image {
+    order: 1; /* Garante que a imagem fique acima do conteúdo */
+    margin-bottom: 20px; /* Espaço entre a imagem e o texto */
+	padding-top: 45px;
+  }
+}

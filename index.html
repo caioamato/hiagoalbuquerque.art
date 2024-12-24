@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hiago Albuquerque</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">hiagoalbuquerque.art</a>
+        <div class="d-flex align-items-center">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" data-target="home" href="#">Inicial</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-target="gallery" href="#">Galeria</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-target="booking" href="#">Agendamento</a>
+            </li>
+          </ul>
+          <div class="social-icons d-flex ms-3">
+            <a
+              href="https://www.instagram.com/halbqrqe/"
+              target="_blank"
+              class="text-white mx-2"
+            >
+              <img src="img/iconeinsta.png" alt="Instagram" class="icon-img" />
+            </a>
+            <a
+              href="https://api.whatsapp.com/send/?phone=5548996123856&text&type=phone_number&app_absent=0"
+              target="_blank"
+              class="text-white mx-2"
+            >
+              <img src="img/iconewhats.png" alt="WhatsApp" class="icon-img" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Seções -->
+    <div id="screens">
+      <!-- Página Inicial -->
+      <section id="home" class="screen active">
+        <div class="container d-flex align-items-center justify-content-center flex-wrap">
+          <div class="content">
+            <h1>Uma Tatuagem ou um Clássico?</h1>
+            <p>
+              O estilo old school tradicional é reconhecido por suas cores
+              vibrantes, como vermelho, azul e amarelo, mas também pode ser
+              aplicado em preto, mantendo sua identidade robusta e autêntica.
+              Com linhas grossas, contornos bem definidos e sombreados
+              minimalistas, esse estilo segue uma estética que valoriza a
+              simplicidade e a legibilidade, garantindo que a tatuagem permaneça
+              nítida e impactante ao longo dos anos.
+            </p>
+            <p>
+              Sou Hiago Albuquerque, tatuador independente em Florianópolis, e
+              meu foco é aperfeiçoar continuamente as técnicas que garantem o
+              melhor desempenho no old school tradicional. Cada traço que faço é
+              pensado para unir precisão, durabilidade e autenticidade,
+              entregando uma experiência única para quem deseja carregar na pele
+              a essência desse estilo clássico.
+            </p>
+            <h4>Agende sua sessão e transforme sua ideia</h4>
+
+            <!-- Player de Áudio -->
+            <div class="radio-player mt-5">
+              <h4>Jazz Radio</h4>
+              <audio
+                controls
+                style="width: 100%; max-width: 600px; border-radius: 0; border: 2px solid #ccc; background-color: #ccc;"
+              >
+                <source
+                  src="https://live.amperwave.net/direct/ppm-jazz24mp3-ibc1"
+                  type="audio/mpeg"
+                />
+                Seu navegador não suporta o elemento de áudio.
+              </audio>
+            </div>
+          </div>
+          <div class="image">
+            <video autoplay loop muted playsinline class="img-fluid rounded">
+              <source src="img/videohiago.mp4" type="video/mp4" />
+              Seu navegador não suporta vídeos.
+            </video>
+          </div>
+        </div>
+      </section>
+
+      <!-- Galeria -->
+      <section id="gallery" class="screen hidden">
+        <div class="container py-5">
+          <h2 class="text-center">Galeria</h2>
+          <div class="gallery-grid">
+            <img src="img/foto1.jpg" alt="Tatuagem 1" class="gallery-item" />
+            <img src="img/foto2.jpg" alt="Tatuagem 2" class="gallery-item" />
+            <img src="img/foto3.jpg" alt="Tatuagem 3" class="gallery-item" />
+            <img src="img/foto4.jpg" alt="Tatuagem 4" class="gallery-item" />
+            <img src="img/foto5.jpg" alt="Tatuagem 5" class="gallery-item" />
+            <img src="img/foto6.jpg" alt="Tatuagem 6" class="gallery-item" />
+            <img src="img/foto7.jpg" alt="Tatuagem 7" class="gallery-item" />
+            <img src="img/foto8.jpg" alt="Tatuagem 8" class="gallery-item" />
+            <img src="img/foto9.jpg" alt="Tatuagem 9" class="gallery-item" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Agendamento -->
+      <section id="booking" class="screen hidden">
+        <div class="container py-5">
+          <h2 class="text-center">Agendamento</h2>
+          <iframe
+            src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0VSJld8WM3quAk7EN_UZO2I33LidG6pUldsVZAKU6U86QulPGlm67NR9owp9NOgm7QBkKbOHae?gv=true"
+            style="border: 0"
+            width="100%"
+            height="600"
+            frameborder="0"
+          ></iframe>
+        </div>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
